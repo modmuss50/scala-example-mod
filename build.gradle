@@ -1,6 +1,7 @@
 plugins {
 	id 'fabric-loom' version '0.2.6-SNAPSHOT'
 	id 'maven-publish'
+	id 'scala'
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_8
@@ -21,6 +22,9 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modCompile "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	//Add scala language support, also pulls in scala
+	modImplementation "net.fabricmc:fabric-language-scala:0.3.1.+"
 
 	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
 	// You may need to force-disable transitiveness on them.

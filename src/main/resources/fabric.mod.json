@@ -19,7 +19,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      {
+        "value": "net.fabricmc.example.ExampleMod",
+        "adapter": "scala"
+      }
     ]
   },
   "mixins": [
